@@ -39,7 +39,7 @@ The **Provider** package is used to manage state across the app, making it easie
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/TandohAnthonyNwiAckah/flutter_mvvm_provider_counter.git
+    git clone https://github.com/TandohAnthonyNwiAckah/mvvm_provider.git
     cd flutter_mvvm_provider_counter
     ```
 
