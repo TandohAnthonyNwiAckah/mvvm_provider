@@ -61,7 +61,6 @@ flutter run
 
 ## HOW TO DEPLOY ON FIREBASE APP DISTRIBUTION USING GITHUB ACTIONS.
 
-1
 > Clone the repository:
 
     ```bash
