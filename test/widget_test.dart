@@ -11,7 +11,7 @@ void main() {
     await tester.pumpWidget(
       ChangeNotifierProvider(
         create: (context) => CounterViewModel(),
-        child: MaterialApp(
+        child: const MaterialApp(
           home: CounterView(),
         ),
       ),

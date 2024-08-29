@@ -56,6 +56,16 @@ To run the app on a connected device or emulator:
 ```bash
 flutter run
 
+```
 
 
+## HOW TO DEPLOY ON FIREBASE APP DISTRIBUTION USING GITHUB ACTIONS.
+
+1
+> Clone the repository:
+
+    ```bash
+    git clone https://github.com/TandohAnthonyNwiAckah/flutter_app_distribution.git
+    cd flutter_app_distribution
+    ```
 
