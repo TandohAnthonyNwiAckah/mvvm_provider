@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_provider/viewmodels/counter_viewmodel.dart';
 import 'package:provider/provider.dart';
-
-import '../viewmodel/counter_viewmodel.dart';
 
 class CounterView extends StatelessWidget {
   const CounterView({super.key});

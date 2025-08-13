@@ -1,70 +1,145 @@
-# Counter App with MVVM Architecture using Provider in Flutter
+# 👨‍💻 Flutter User List App with MVVM + Provider
 
-This project demonstrates a simple Flutter app following the **Model-View-ViewModel (MVVM)** architecture pattern, integrated with the **Provider** package for state management. The app is a basic counter that increments a value each time a button is pressed. This project includes a widget test to ensure the counter behaves as expected.
+This Flutter project demonstrates how to build a **User List App** that fetches data from a REST API
+using the **MVVM (Model-View-ViewModel)** architecture pattern. It uses the **Provider** package for
+clean and reactive state management, and integrates **HTTP networking** for fetching real data.
 
-## Table of Contents
+---
 
-- [Overview](#overview)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Running the App](#running-the-app)
+## 📚 Table of Contents
 
+- [📋 Overview](#-overview)
+- [🧱 Architecture](#-architecture)
+- [🚀 Installation](#-installation)
+- [▶️ Running the App](#️-running-the-app)
+- [🧪 Features](#-features)
+- [📦 Firebase App Distribution](#-firebase-app-distribution)
+- [🧑‍💻 Author](#-author)
 
-## Overview
+---
 
-The application implements a simple counter where a user can increment a value by pressing a floating action button. The app is built using Flutter and adheres to the MVVM architecture pattern, with state management handled by the Provider package.
+## 📋 Overview
 
-## Architecture
+The app fetches and displays a list of users from the placeholder API:
+https://jsonplaceholder.typicode.com/users
 
-### MVVM Overview
+Each user includes:
 
-- **Model**: Represents the data layer and business logic.
-- **ViewModel**: Acts as a bridge between the Model and the View, managing the logic for UI updates.
-- **View**: The UI layer that listens to the ViewModel for changes and renders the UI accordingly.
+- Name
+- Email
+- Company
+- Location (which opens in Maps on tap)
 
-### Provider
+---
 
-The **Provider** package is used to manage state across the app, making it easier to separate concerns and maintain a clean architecture.
+## 🧱 Architecture
 
-## Installation
+### MVVM Breakdown
 
-### Prerequisites
+| Layer         | Purpose                                             |
+|---------------|-----------------------------------------------------|
+| **Model**     | Defines user data structures and handles API logic  |
+| **ViewModel** | Connects the view to the model and manages UI state |
+| **View**      | Builds UI and reacts to changes in ViewModel        |
 
-- Flutter SDK (v2.0.0 or later)
+### 🔌 State Management
+
+The app uses [`provider`](https://pub.dev/packages/provider) to manage dependency injection and
+state changes.
+
+---
+
+## 🚀 Installation
+
+### ✅ Prerequisites
+
+- Flutter SDK (3.0 or later)
 - Dart SDK
-- IDE (Visual Studio Code, Android Studio, etc.)
+- Android Studio / VS Code / Xcode
+- Firebase CLI (for distribution)
 
-### Steps
+### 📦 Setup
 
-1. Clone the repository:
+1. **Clone the repository**
 
-    ```bash
-    git clone https://github.com/TandohAnthonyNwiAckah/mvvm_provider.git
-    cd flutter_mvvm_provider_counter
-    ```
+```bash
+git clone https://github.com/TandohAnthonyNwiAckah/mvvm_provider.git
+cd mvvm_provider
+```
 
-2. Install the dependencies:
+2. **Install dependencies**
 
-    ```bash
-    flutter pub get
-    ```
+```bash
+   flutter pub get
+```
 
-## Running the App
-
-To run the app on a connected device or emulator:
+3. **Running the App**
 
 ```bash
 flutter run
-
 ```
 
+### 🧪 Features
 
-## HOW TO DEPLOY ON FIREBASE APP DISTRIBUTION USING GITHUB ACTIONS.
+    ✅ Fetch users from a REST API
 
-> Clone the repository:
+    ✅ Open user location in Google Maps
 
-    ```bash
-    git clone https://github.com/TandohAnthonyNwiAckah/flutter_app_distribution.git
-    cd flutter_app_distribution
-    ```
+    ✅ Error and loading state management
+
+    ✅ MVVM structure
+
+    ✅ Modular services and utils
+
+### 📦 Firebase App Distribution
+
+    Firebase distribution is optional and set up through GitHub Actions.
+
+## 🔧 Requirements
+
+    Firebase project set up
+
+    Firebase App Distribution enabled
+
+    google-services.json (Android) and/or GoogleService-Info.plist (iOS)
+
+    GitHub Secrets:
+
+        FIREBASE_TOKEN
+
+        ANDROID_APP_ID
+
+🧑‍💻 Author
+---
+
+- **Tandoh Anthony Nwi Ackah** - [GitHub](https://github.com/TandohAnthonyNwiAckah)
+- **Email** - [anthony.tandoh@tanacom.io](mailto:anthony.tandoh@tanacom.io)
+- **LinkedIn** - [Tandoh Anthony Nwi Ackah](https://www.linkedin.com/in/tandoh-anthony-nwi-ackah/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

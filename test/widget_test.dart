@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mvvm_provider/view/counter_view.dart';
-import 'package:mvvm_provider/viewmodel/counter_viewmodel.dart';
+import 'package:mvvm_provider/viewmodels/counter_viewmodel.dart';
+import 'package:mvvm_provider/views/counter_view.dart';
 import 'package:provider/provider.dart';
 
 void main() {

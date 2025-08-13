@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../model/counter_model.dart';
+import 'package:mvvm_provider/models/counter_model.dart';
 
 class CounterViewModel extends ChangeNotifier {
-
   final CounterModel _counterModel = CounterModel();
 
   int get count => _counterModel.count;
@@ -12,6 +10,4 @@ class CounterViewModel extends ChangeNotifier {
     _counterModel.increment();
     notifyListeners(); // Notify listeners to rebuild the UI
   }
-
-
 }

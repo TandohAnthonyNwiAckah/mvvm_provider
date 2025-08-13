@@ -1,5 +1,4 @@
 class CounterModel {
-
   int _count = 0;
 
   int get count => _count;
@@ -7,5 +6,4 @@ class CounterModel {
   void increment() {
     _count++;
   }
-
 }
