@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_provider/utils/map_launcher.dart';
-import 'package:mvvm_provider/utils/widgets/custom_app_bar.dart';
-import 'package:mvvm_provider/utils/widgets/user_card_tile.dart';
+import 'package:mvvm_provider/utils/common_widgets/custom_app_bar.dart';
 import 'package:mvvm_provider/viewmodels/user_viewmodel.dart';
 import 'package:mvvm_provider/views/counter_view.dart';
+import 'package:mvvm_provider/views/users/user_detail_view.dart';
+import 'package:mvvm_provider/views/users/widget/user_card_tile.dart';
 import 'package:provider/provider.dart';
 
 class UserListView extends StatefulWidget {
@@ -61,17 +61,12 @@ class _UserListViewState extends State<UserListView> {
                   email: user.email,
                   companyName: user.company.name,
                   onTap: () async {
-                    final messenger = ScaffoldMessenger.of(context);
-
-                    try {
-                      await MapLauncher.openLocation(
-                        lat: user.address.geo.lat,
-                        lng: user.address.geo.lng,
-                      );
-                    } catch (e) {
-                      messenger
-                          .showSnackBar(SnackBar(content: Text(e.toString())));
-                    }
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => UserDetailView(user: user),
+                      ),
+                    );
                   },
                 );
               },

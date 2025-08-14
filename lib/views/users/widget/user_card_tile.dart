@@ -23,14 +23,19 @@ class UserCardTile extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: ListTile(
         onTap: onTap,
-        title: Text(name,
-            style: const TextStyle(
-                fontWeight: FontWeight.bold, color: AppColors.primary)),
-        subtitle: Text(email),
-        trailing: Text(
-          companyName,
-          style: const TextStyle(fontStyle: FontStyle.italic),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(name,
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold, color: AppColors.primary)),
+            Text(
+              companyName,
+              style: const TextStyle(fontStyle: FontStyle.italic),
+            ),
+          ],
         ),
+        subtitle: Text(email),
       ),
     );
   }

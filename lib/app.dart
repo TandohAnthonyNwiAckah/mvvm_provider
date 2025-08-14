@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_provider/views/user_list_view.dart';
+import 'package:mvvm_provider/views/users/user_list_view.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
